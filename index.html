@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<title>CoD4 Config Checker</title>
-		<link href="css/style.css" rel="stylesheet">
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<title>CoD4 Config Checker</title>
+	<link href="css/style.css" rel="stylesheet">
+</head>
 
-	<body>
-		<div id="wrap">
-			<div id="headline">
-				<p>CoD4 Config Checker</p>
-			</div>
-
-			<form action="#" onsubmit="checkCfg();return false;">
-				<textarea placeholder="Paste your config here..." name="cfg" id="cfg" cols="30" rows="5"></textarea>
-				<button class="btn grey transparent" type="submit" value="Scan">Scan</button>
-			</form>
-
-			<ul id="violations">
-				<li></li>
-			</ul>
-			<small></small>
+<body>
+	<div id="wrap">
+		<div id="headline">
+			<p>CoD4 Config Checker</p>
 		</div>
-	</body>
 
-	<footer>
+		<form action="#" onsubmit="checkCfg();return false;">
+			<textarea placeholder="Paste your config here..." name="cfg" id="cfg" cols="30" rows="5"></textarea>
+			<button class="btn grey transparent" type="submit" value="Scan">Scan</button>
+		</form>
+
+		<ul id="violations">
+			<li></li>
+		</ul>
+		<small></small>
+	</div>
+
+	<div class="spacer"></div>
+	<footer class="footer">
 		<p>&#169 2013-2021, jNizM (https://github.com/jNizM)</p>
 	</footer>
+</body>
 
-	<script src="js/checkcfg.js"></script>
+<script src="js/checkcfg.js"></script>
+
 </html>
