@@ -5,7 +5,7 @@ function checkCfg()
 	if (document.getElementById("cfg").value.length === 0)
 	{
 		document.getElementById("violations").innerHTML = "";
-		document.getElementById("violations").style.display = "none"
+		document.getElementById("violations").style.display = "none";
 	}
 	else
 	{
@@ -24,7 +24,7 @@ function checkCfg()
 					if (b[b.length - 1].toLowerCase().indexOf(f[d].toLowerCase()) !== -1)
 					{
 						a += '<li class="orange">Line ' + (e + 1) + ": Disallowed BIND contents <em>" + f[d] + "</em> in <pre>" + config[e] + '</pre> (<a href="#" onclick="removeLine(' + (e + 1) + ');return false;">Remove this line</a>)</li>';
-						break
+						break;
 					}
 				}
 			}
@@ -38,7 +38,7 @@ function checkCfg()
 						if (b[b.length - 2].toLowerCase() === c[d].toLowerCase())
 						{
 							a += '<li class="red">Line ' + (e + 1) + ": Disallowed DVAR name <em>" + c[d] + '</em> (<a href="#" onclick="removeLine(' + (e + 1) + ');return false;">Remove this line</a>)</li>';
-							break
+							break;
 						}
 					}
 					for (d = 0; d < f.length; d++)
@@ -46,7 +46,7 @@ function checkCfg()
 						if (b[b.length - 1].toLowerCase().indexOf(f[d].toLowerCase()) !== -1)
 						{
 							a += '<li class="orange">Line ' + (e + 1) + ": Disallowed DVAR contents <em>" + f[d] + "</em> in <pre>" + config[e] + '</pre> (<a href="#" onclick="removeLine(' + (e + 1) + ');return false;">Remove this line</a>)</li>';
-							break
+							break;
 						}
 					}
 				}
@@ -54,10 +54,10 @@ function checkCfg()
 		}
 		if (a === "")
 		{
-			a = '<li class="green">Your config is clean. Congratulations!</li>'
+			a = '<li class="green">Your config is clean. Congratulations!</li>';
 		}
 		document.getElementById("violations").innerHTML = a;
-		document.getElementById("violations").style.display = "block"
+		document.getElementById("violations").style.display = "block";
 	}
 }
 
@@ -65,5 +65,5 @@ function removeLine(a)
 {
 	config.splice(parseInt(a) - 1, 1);
 	document.getElementById("cfg").value = config.join("\n");
-	checkCfg()
-};
+	checkCfg();
+}
